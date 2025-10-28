@@ -2,14 +2,14 @@ name: Deploy Vite React App to gh-pages
 
 on:
   push:
-    branches-ignore:
-      - gh-pages
     branches:
       - main
-
+      - gh-pages  # include gh-pages so it won't error if accidentally triggered
 
 jobs:
   build:
+    # 👇 Skip this job if the event is on gh-pages branch
+    if: github.ref != 'refs/heads/gh-pages'
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +30,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./dist
-            publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
