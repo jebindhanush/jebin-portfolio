@@ -179,10 +179,10 @@ const App: React.FC = () => {
           Have a project or collaboration idea? Let’s build something together.
         </p>
         <a
-          href="mailto:jebin@example.com"
+          href="mailto:jebin.t97@gmail.com"
           className="btn btn-gradient-lg fw-semibold rounded-pill shadow-sm"
         >
-          📧 jebin@example.com
+          📧 jebin.t97@gmail.com
         </a>
       </section>
 
