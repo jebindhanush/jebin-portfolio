@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Capacitor } from "@capacitor/core";
 import skillsData from "./data/skills.json";
 import experienceData from "./data/experience.json";
 
 const App: React.FC = () => {
-  const [isApp, setIsApp] = useState(false);
   const [theme, setTheme] = useState<"blue-cyan" | "green-purple">(
     (localStorage.getItem("theme") as "blue-cyan" | "green-purple") || "blue-cyan"
   );
@@ -15,12 +13,6 @@ const App: React.FC = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
 
-    const isCapacitorApp = Capacitor.isNativePlatform();
-    const isStandalonePWA =
-      window.matchMedia("(display-mode: standalone)").matches ||
-      (window.navigator as any).standalone === true;
-
-    setIsApp(isCapacitorApp || isStandalonePWA);
   }, []);
 
   useEffect(() => {
@@ -34,10 +26,6 @@ const App: React.FC = () => {
   const gradients = {
     "blue-cyan": "linear-gradient(90deg, #00ff9d, #00c2ff)",
     "green-purple": "linear-gradient(90deg, #7fff00, #b000ff)",
-  };
-
-  const handleDownloadClick = () => {
-    alert("⚠️ Unsigned test APK — installation may show a warning.");
   };
 
   return (
