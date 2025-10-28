@@ -51,23 +51,69 @@ const App: React.FC = () => {
 
         
       )}
+{/* 🌟 Hero / Intro Section */}
+<section
+  className="hero-section d-flex flex-column justify-content-center align-items-start px-4 px-md-5 text-light position-relative overflow-hidden"
+  data-aos="fade-up"
+>
+  {/* Subtle background glow */}
+  <div
+    className="position-absolute top-0 start-0 w-100 h-100"
+    style={{
+      background: "radial-gradient(circle at 30% 20%, rgba(0,255,157,0.15), transparent 70%)",
+      zIndex: 0,
+    }}
+  ></div>
 
-      {/* 🌟 Header Section */}
-      <section className="hero-section d-flex flex-column justify-content-center align-items-start px-4 px-md-5 text-light">
-        <h1 className="display-4 fw-bold mb-3">
-          Hi, I’m <span className="text-accent">Jebin T</span> 👋
-        </h1>
-        <p className="lead mb-4">
-          I’m a <strong>Full Stack Developer</strong> who builds{" "}
-          <span className="highlight">scalable web & mobile apps</span> using{" "}
-          <strong>ASP.NET</strong>, <strong>Angular</strong>, <strong>React</strong>, and{" "}
-          <strong>Cloud Technologies</strong>.
-        </p>
-        <a href="#skills" className="btn btn-gradient fw-semibold shadow-sm rounded-pill">
-          Explore My Skills 🚀
-        </a>
-      </section>
+  <div style={{ zIndex: 1 }}>
+    <h1
+      className="display-4 fw-bold mb-3"
+      style={{
+        background: "linear-gradient(90deg, #00ff9d, #00c2ff)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        textShadow: "0 0 20px rgba(0,255,157,0.4)",
+      }}
+    >
+      👋 Hi, I’m <span className="fw-bold">Jebin&nbsp;T</span>
+    </h1>
 
+    <h3
+      className="fw-semibold mb-3"
+      style={{
+        color: "#a8e6ff",
+        letterSpacing: "1px",
+        textShadow: "0 0 10px rgba(0,194,255,0.4)",
+      }}
+    >
+      💻 Full Stack Developer | Cloud Enthusiast | Tech Explorer
+    </h3>
+
+    <p
+      className="lead mb-4 opacity-75"
+      style={{ maxWidth: "600px", lineHeight: "1.7" }}
+    >
+      I craft <span className="text-accent fw-semibold">scalable web & mobile solutions</span> using{" "}
+      <strong>ASP.NET</strong>, <strong>Angular</strong>, <strong>React</strong>, and{" "}
+      <strong>Cloud Platforms (Azure / AWS)</strong>.  
+      Passionate about <span className="highlight">modern UI, performance</span>, and
+      delivering meaningful digital experiences.
+    </p>
+
+    <div data-aos="zoom-in" data-aos-delay="300">
+      <a href="#skills" className="btn btn-gradient fw-semibold shadow-sm rounded-pill me-2">
+        🚀 Explore My Skills
+      </a>
+      <a
+        href="#experience"
+        className="btn btn-outline-light fw-semibold rounded-pill shadow-sm"
+        style={{ border: "2px solid #00c2ff", color: "#00c2ff" }}
+      >
+        👨‍💻 Explore Experience
+      </a>
+    </div>
+  </div>
+</section>
 
 
 {/* 🧑‍💻 Experience Section */}
