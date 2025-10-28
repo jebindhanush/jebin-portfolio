@@ -161,3 +161,35 @@ img {
   transform: translateY(0);
   opacity: 1;
 }
+
+/* 💼 Experience section styling */
+.section-gradient-cyan {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  padding: 80px 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.glass-card.expanded .experience-details {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 10px;
+}
+

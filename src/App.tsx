@@ -45,7 +45,7 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {/* 🌟 Hero Section */}
+      {/* 🌟 Header Section */}
       <section className="hero-section d-flex flex-column justify-content-center align-items-start px-4 px-md-5 text-light">
         <h1 className="display-4 fw-bold mb-3">
           Hi, I’m <span className="text-accent">Jebin Dhanush</span> 👋
@@ -60,6 +60,82 @@ const App: React.FC = () => {
           Explore My Skills 🚀
         </a>
       </section>
+
+
+
+      {/* 🧑‍💻 Experience Section */}
+      <section
+        id="experience"
+        className="section-gradient-cyan text-light"
+        data-aos="fade-up"
+      >
+        <div className="text-center mb-5">
+          <h2 className="fw-bold text-glow">Professional Experience</h2>
+          <p className="opacity-75">
+            A snapshot of my journey in building software and leading development efforts.
+          </p>
+        </div>
+
+        <div className="container">
+          {[
+            {
+              role: "Full Stack Developer",
+              company: "CGI Inc.",
+              period: "March 2023 – Present",
+              details: [
+                "Developing and deploying scalable web applications using React, .NET, and Azure.",
+                "Built custom APIs and improved load times by 40%.",
+                "Collaborated cross-functionally with product and design teams.",
+              ],
+            },
+            {
+              role: "Software Engineer",
+              company: "Hcl Technologies",
+              period: "Jan 2021 – March 2023",
+              details: [
+                "Created enterprise dashboards in Angular & ASP.NET Core.",
+                "Implemented CI/CD pipelines for faster, automated releases.",
+                "Mentored junior developers on React and TypeScript.",
+              ],
+            },
+            {
+              role: "Intern Developer",
+              company: "Creative Minds Labs",
+              period: "Jan 2019 – Oct 2022",
+              details: [
+                "Built responsive UI prototypes with HTML, CSS, and JavaScript.",
+                "Assisted in database design and SQL query optimization.",
+              ],
+            },
+          ].map(({ role, company, period, details }, i) => (
+            <div
+              key={i}
+              className="mb-3 glass-card shadow-sm p-3 rounded-4"
+              style={{ cursor: "pointer" }}
+              onClick={(e) => {
+                const card = e.currentTarget;
+                card.classList.toggle("expanded");
+              }}
+            >
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 className="fw-bold text-accent mb-0">{role}</h5>
+                  <small className="opacity-75">{company}</small>
+                </div>
+                <span className="text-accent small fw-semibold">{period}</span>
+              </div>
+
+              <div className="experience-details mt-3">
+                <ul className="list-unstyled small mb-0">
+                  {details.map((d, j) => (
+                    <li key={j}>• {d}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> 
 
       {/* 💼 Skills Section */}
       <section id="skills" className="section-gradient-blue text-light" data-aos="fade-up">
@@ -109,69 +185,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 📱 Projects Section */}
-      <section id="projects" className="section-gradient-purple text-light" data-aos="fade-up">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold text-glow">Featured Projects</h2>
-          <p className="opacity-75">Some of the products and experiments I’ve built recently.</p>
-        </div>
-
-        <div className="row g-4">
-          {[
-            {
-              title: "React PWA Portfolio",
-              desc: "Responsive PWA portfolio with offline access and installable features.",
-              img: "react-pwa-diagram.png",
-            },
-            {
-              title: "ASP.NET + SQL Server Dashboard",
-              desc: "Full-stack data visualization dashboard with secure API backend.",
-              img: "dashboard.png",
-            },
-          ].map(({ title, desc, img }) => (
-            <div className="col-md-6" key={title}>
-              <div className="card glass-card h-100">
-                <img src={img} alt={title} className="card-img-top rounded-top" />
-                <div className="card-body">
-                  <h5 className="fw-bold text-accent mb-2">{title}</h5>
-                  <p className="opacity-75">{desc}</p>
-                  <a href="#" className="btn btn-gradient btn-sm rounded-pill">
-                    View Project →
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ☁️ Cloud & Tools Section */}
-      <section className="section-gradient-green text-light" data-aos="fade-up">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold text-glow">React + PWA + Capacitor Stack</h2>
-          <p className="opacity-75">Build once, run everywhere — web to mobile.</p>
-        </div>
-
-        <div className="row align-items-center g-4">
-          <div className="col-md-6">
-            <ul className="fs-6 list-unstyled">
-              <li>⚛️ React — Component-based UI</li>
-              <li>📦 Vite — Lightning-fast build tool</li>
-              <li>📱 Capacitor — Native Android/iOS wrapper</li>
-              <li>☁️ Service Worker — Offline caching</li>
-              <li>🧭 Manifest.json — App metadata</li>
-            </ul>
-          </div>
-          <div className="col-md-6 text-center">
-            <img
-              src="tech-diagram.png"
-              alt="Tech Stack"
-              className="img-fluid rounded-3 shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ✉️ Contact Section */}
       <section id="contact" className="section-gradient-orange text-light text-center" data-aos="fade-up">
         <h2 className="fw-bold text-glow mb-4">Get In Touch ✉️</h2>
@@ -188,7 +201,7 @@ const App: React.FC = () => {
 
       {/* ⚫ Footer */}
       <footer className="text-center text-white py-3 bg-dark">
-        © {new Date().getFullYear()} Jebin Dhanush — Portfolio | Built with React + PWA + Capacitor
+        © {new Date().getFullYear()} Jebin Dhanush — Portfolio | Built with React + PWA
       </footer>
     </div>
   );
