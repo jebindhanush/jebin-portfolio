@@ -31,6 +31,7 @@ const App: React.FC = () => {
   return (
     <div
       className="portfolio-app position-relative text-light"
+      data-theme={theme} // 👈 add this line
       style={{
         background:
           theme === "blue-cyan"
@@ -77,21 +78,12 @@ const App: React.FC = () => {
         ></div>
 
         <div style={{ zIndex: 1 }}>
-          <h1
-            className="display-4 fw-bold mb-3"
-            style={{
-              background: gradients[theme],
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              textShadow:
-                theme === "blue-cyan"
-                  ? "0 0 20px rgba(0,255,157,0.4)"
-                  : "0 0 20px rgba(155,0,255,0.4)",
-              transition: "all 0.5s ease",
-            }}
-          >
-            👋 Hi, I’m <span className="fw-bold">Jebin&nbsp;T</span>
-          </h1>
+         <h1
+  className="display-4 fw-bold mb-3 gradient-text"
+  key={theme} // 👈 forces React to re-render text properly on theme change
+>
+  👋 Hi, I’m <span className="fw-bold">Jebin&nbsp;T</span>
+</h1>
 
           <h3
             className="fw-semibold mb-3"
