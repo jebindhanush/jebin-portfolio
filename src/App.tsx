@@ -3,6 +3,7 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Capacitor } from "@capacitor/core";
+import skillsData from "./data/skills.json";
 
 const App: React.FC = () => {
   const [isApp, setIsApp] = useState(false);
@@ -79,7 +80,7 @@ const App: React.FC = () => {
         <div className="container">
           {[
             {
-              role: "Full Stack Developer",
+              role: "Lead Analyst",
               company: "CGI Inc.",
               period: "March 2023 – Present",
               details: [
@@ -89,7 +90,7 @@ const App: React.FC = () => {
               ],
             },
             {
-              role: "Software Engineer",
+              role: "Lean Engineer",
               company: "Hcl Technologies",
               period: "Jan 2021 – March 2023",
               details: [
@@ -99,7 +100,7 @@ const App: React.FC = () => {
               ],
             },
             {
-              role: "Intern Developer",
+              role: "Software Developer",
               company: "Creative Minds Labs",
               period: "Jan 2019 – Oct 2022",
               details: [
@@ -137,56 +138,51 @@ const App: React.FC = () => {
         </div>
       </section> 
 
-      {/* 💼 Skills Section */}
-      <section id="skills" className="section-gradient-blue text-light" data-aos="fade-up">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold text-glow">My Technical Skills</h2>
-          <p className="opacity-75">
-            Expertise across front-end, back-end, and cloud for complete product development.
-          </p>
-        </div>
+{/* 💼 Skills Section */}
+  <section id="skills" className="section-gradient-blue text-light" data-aos="fade-up">
+      <div className="text-center mb-5">
+        <h2 className="fw-bold text-glow">My Technical Skills</h2>
+        <p className="opacity-75">
+          Expertise across front-end, back-end, mobile, and cloud — with strong focus on quality and scalability.
+        </p>
+      </div>
 
-        <div className="row g-4">
-          {[
-            {
-              title: "🎨 Frontend Development",
-              items: ["HTML / CSS / SCSS", "JavaScript / TypeScript", "Angular", "React.js"],
-            },
-            {
-              title: "⚙️ Backend Development",
-              items: ["ASP.NET", "PHP"],
-            },
-            {
-              title: "🗄️ Databases",
-              items: ["SQL Server", "PostgreSQL", "MySQL"],
-            },
-            {
-              title: "☁️ Cloud Platforms",
-              items: ["Microsoft Azure", "Amazon Web Services (AWS)"],
-            },
-            {
-              title: "🤖 AI & Developer Tools",
-              items: ["GitHub Copilot", "Git & GitHub", "VS Code / Visual Studio"],
-            },
-          ].map(({ title, items }) => (
-            <div className="col-md-6 col-lg-4" key={title}>
-              <div className="card glass-card text-light h-100 shadow-sm">
-                <div className="card-body">
-                  <h5 className="fw-bold mb-3 text-accent">{title}</h5>
-                  <ul className="list-unstyled small">
-                    {items.map((i) => (
-                      <li key={i}>• {i}</li>
-                    ))}
-                  </ul>
+      <div className="row g-4">
+        {skillsData.map(({ title, skills }) => (
+          <div className="col-md-6 col-lg-4" key={title}>
+            <div className="card glass-card text-light h-100 shadow-sm p-3">
+              <h5 className="fw-bold mb-3 text-accent">{title}</h5>
+              {skills.map(({ name, level }) => (
+                <div key={name} className="mb-3">
+                  <div className="d-flex justify-content-between small">
+                    <span>{name}</span>
+                    <span>{level}%</span>
+                  </div>
+                  <div
+                    className="progress"
+                    style={{ height: "8px", background: "rgba(255,255,255,0.1)" }}
+                  >
+                    <div
+                      className="progress-bar"
+                      role="progressbar"
+                      style={{
+                        width: `${level}%`,
+                        background: "linear-gradient(90deg, #00ff9d, #00c2ff)",
+                        boxShadow: "0 0 10px rgba(0,255,150,0.6)"
+                      }}
+                    ></div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
+    </section>
+
 
       {/* ✉️ Contact Section */}
-      <section id="contact" className="section-gradient-orange text-light text-center" data-aos="fade-up">
+      <section id="contact" className="section-gradient-white text-dark text-center" data-aos="fade-up">
         <h2 className="fw-bold text-glow mb-4">Get In Touch ✉️</h2>
         <p className="opacity-75 mb-4">
           Have a project or collaboration idea? Let’s build something together.

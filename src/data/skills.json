@@ -1,0 +1,62 @@
+[
+  {
+    "title": "🎨 Frontend & Mobile Development",
+    "skills": [
+      { "name": "HTML / CSS / SCSS", "level": 95 },
+      { "name": "JavaScript / TypeScript / jQuery", "level": 90 },
+      { "name": "React.js / React Native", "level": 85 },
+      { "name": "Angular", "level": 80 },
+      { "name": "Flutter / PhoneGap", "level": 75 },
+      { "name": "Bootstrap / Material UI", "level": 90 },
+      { "name": "Progressive Web Apps (PWA)", "level": 85 }
+    ]
+  },
+  {
+    "title": "⚙️ Backend Development",
+    "skills": [
+      { "name": "ASP.NET Core / MVC", "level": 90 },
+      { "name": "C# APIs & Microservices", "level": 85 },
+      { "name": "Laravel (PHP)", "level": 75 },
+      { "name": "Entity Framework Core", "level": 90 },
+      { "name": "ADO.NET", "level": 85 },
+      { "name": "LINQ & Lambda Expressions", "level": 90 },
+      { "name": "Redis Cache Management", "level": 80 }
+    ]
+  },
+  {
+    "title": "🧩 Testing & QA",
+    "skills": [
+      { "name": "Jest / xUnit / NUnit", "level": 85 },
+      { "name": "Integration Testing", "level": 80 },
+      { "name": "End-to-End (E2E) Testing", "level": 75 },
+      { "name": "Postman API Testing", "level": 90 }
+    ]
+  },
+  {
+    "title": "📊 Reporting & Dashboards",
+    "skills": [
+      { "name": "RDLC Reports", "level": 85 },
+      { "name": ".NET Reports", "level": 80 },
+      { "name": "AmCharts / HighCharts", "level": 75 }
+    ]
+  },
+  {
+    "title": "🗄️ Databases & Cloud",
+    "skills": [
+      { "name": "SQL Server / MySQL / PostgreSQL", "level": 90 },
+      { "name": "Microsoft Azure", "level": 80 },
+      { "name": "AWS", "level": 75 },
+      { "name": "Redis Cache Layer", "level": 80 }
+    ]
+  },
+  {
+    "title": "🤖 Tools & Developer Ecosystem",
+    "skills": [
+      { "name": "Git & GitHub / GitHub Actions", "level": 90 },
+      { "name": "GitHub Copilot", "level": 85 },
+      { "name": "VS Code / Visual Studio", "level": 90 },
+      { "name": "CI/CD Pipelines", "level": 80 },
+      { "name": "Docker Basics", "level": 70 }
+    ]
+  }
+]

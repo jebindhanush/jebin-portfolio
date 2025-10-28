@@ -74,9 +74,15 @@ img {
   background: linear-gradient(135deg, #11998e, #38ef7d);
   color: #fff;
 }
+
 .section-gradient-orange {
   background: linear-gradient(135deg, #ff9966, #ff5e62);
   color: #fff;
+}
+
+.section-gradient-white {
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  color: #333;
 }
 
 /* === CAPACITOR SECTION === */
@@ -192,4 +198,61 @@ img {
   opacity: 1;
   margin-top: 10px;
 }
+
+.section-gradient-blue {
+  background: linear-gradient(135deg, #1a2980, #26d0ce);
+  padding: 80px 0;
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.card ul li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.section-gradient-blue {
+  background: linear-gradient(135deg, #1a2980, #26d0ce);
+  padding: 80px 0;
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.card ul li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.section-gradient-blue {
+  background: linear-gradient(135deg, #0a1930, #09203f);
+  padding: 80px 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.2);
+}
+
+.text-accent {
+  color: #00ffb3;
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(0, 255, 200, 0.5);
+}
+
+
+
 
