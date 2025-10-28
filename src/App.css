@@ -256,3 +256,30 @@ img {
 
 
 
+
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #00ff9d, #00c2ff);
+  border: none;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+}
+
+.text-accent {
+  color: #00ff9d !important;
+}
+
+.highlight {
+  color: #00ffb0;
+  font-weight: 600;
+}
