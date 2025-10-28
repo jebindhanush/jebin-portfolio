@@ -2,7 +2,11 @@ name: Deploy Vite React App to gh-pages
 
 on:
   push:
-    branches: [main]  # Deploy whenever you push to main
+    branches-ignore:
+      - gh-pages
+    branches:
+      - main
+
 
 jobs:
   build:
