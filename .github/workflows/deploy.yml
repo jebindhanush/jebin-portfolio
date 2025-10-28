@@ -1,4 +1,4 @@
-name: Deploy Vite React App to GitHub Pages
+name: Deploy Jebin Portfolio to GitHub Pages
 
 on:
   push:
