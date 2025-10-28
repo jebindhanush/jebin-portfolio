@@ -55,7 +55,7 @@ const App: React.FC = () => {
       {/* 🌟 Header Section */}
       <section className="hero-section d-flex flex-column justify-content-center align-items-start px-4 px-md-5 text-light">
         <h1 className="display-4 fw-bold mb-3">
-          Hi, I’m <span className="text-accent">Jebin Dhanush</span> 👋
+          Hi, I’m <span className="text-accent">Jebin T</span> 👋
         </h1>
         <p className="lead mb-4">
           I’m a <strong>Full Stack Developer</strong> who builds{" "}
