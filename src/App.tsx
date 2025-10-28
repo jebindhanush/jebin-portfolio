@@ -4,9 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Capacitor } from "@capacitor/core";
 import skillsData from "./data/skills.json";
+import experienceData from "./data/experience.json";
+
 
 const App: React.FC = () => {
-  const [isApp, setIsApp] = useState(false);
+  const [isApp, setIsApp] = useState(false);  
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
@@ -43,7 +45,11 @@ const App: React.FC = () => {
           >
             📱 Download APK
           </a>
+
+          
         </div>
+
+        
       )}
 
       {/* 🌟 Header Section */}
@@ -64,79 +70,53 @@ const App: React.FC = () => {
 
 
 
-      {/* 🧑‍💻 Experience Section */}
-      <section
-        id="experience"
-        className="section-gradient-cyan text-light"
-        data-aos="fade-up"
-      >
-        <div className="text-center mb-5">
-          <h2 className="fw-bold text-glow">Professional Experience</h2>
-          <p className="opacity-75">
-            A snapshot of my journey in building software and leading development efforts.
-          </p>
-        </div>
+{/* 🧑‍💻 Experience Section */}
+ <section
+      id="experience"
+      className="section-gradient-cyan text-light"
+      data-aos="fade-up"
+    >
+      <div className="text-center mb-5">
+        <h2 className="fw-bold text-glow">Professional Experience</h2>
+        <p className="opacity-75">
+          A snapshot of my journey building enterprise applications, leading migrations,
+          and delivering scalable software solutions.
+        </p>
+      </div>
 
-        <div className="container">
-          {[
-            {
-              role: "Lead Analyst",
-              company: "CGI Inc.",
-              period: "March 2023 – Present",
-              details: [
-                "Developing and deploying scalable web applications using React, .NET, and Azure.",
-                "Built custom APIs and improved load times by 40%.",
-                "Collaborated cross-functionally with product and design teams.",
-              ],
-            },
-            {
-              role: "Lean Engineer",
-              company: "Hcl Technologies",
-              period: "Jan 2021 – March 2023",
-              details: [
-                "Created enterprise dashboards in Angular & ASP.NET Core.",
-                "Implemented CI/CD pipelines for faster, automated releases.",
-                "Mentored junior developers on React and TypeScript.",
-              ],
-            },
-            {
-              role: "Software Developer",
-              company: "Creative Minds Labs",
-              period: "Jan 2019 – Oct 2022",
-              details: [
-                "Built responsive UI prototypes with HTML, CSS, and JavaScript.",
-                "Assisted in database design and SQL query optimization.",
-              ],
-            },
-          ].map(({ role, company, period, details }, i) => (
-            <div
-              key={i}
-              className="mb-3 glass-card shadow-sm p-3 rounded-4"
-              style={{ cursor: "pointer" }}
-              onClick={(e) => {
-                const card = e.currentTarget;
-                card.classList.toggle("expanded");
-              }}
-            >
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <h5 className="fw-bold text-accent mb-0">{role}</h5>
-                  <small className="opacity-75">{company}</small>
-                </div>
-                <span className="text-accent small fw-semibold">{period}</span>
+      <div className="container">
+        {experienceData.map(({ role, company, period, projects }, i) => (
+          <div
+            key={i}
+            className="mb-3 glass-card shadow-sm p-3 rounded-4"
+            style={{ cursor: "pointer" }}
+            onClick={(e) => e.currentTarget.classList.toggle("expanded")}
+          >
+            <div className="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 className="fw-bold text-accent mb-0">{role}</h5>
+                <small className="opacity-75">{company}</small>
               </div>
-
-              <div className="experience-details mt-3">
-                <ul className="list-unstyled small mb-0">
-                  {details.map((d, j) => (
-                    <li key={j}>• {d}</li>
-                  ))}
-                </ul>
-              </div>
+              <span className="text-accent small fw-semibold">{period}</span>
             </div>
-          ))}
-        </div>
-      </section> 
+
+            <div className="experience-details mt-3">
+              {projects.map((proj, j) => (
+                <div key={j} className="mb-3">
+                  <h6 className="fw-semibold text-light mb-1">📁 {proj.name}</h6>
+                  <ul className="list-unstyled small mb-0 opacity-85">
+                    {proj.description.map((d, k) => (
+                      <li key={k}>• {d}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
 
 {/* 💼 Skills Section */}
   <section id="skills" className="section-gradient-blue text-light" data-aos="fade-up">

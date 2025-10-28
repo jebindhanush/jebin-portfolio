@@ -1,0 +1,55 @@
+[
+  {
+    "role": "Lead Analyst",
+    "company": "CGI Inc.",
+    "period": "March 2023 – Present",
+    "projects": [
+      {
+        "name": "StoneEagle Migration",
+        "description": [
+          "Led the migration of StoneEagle platform from Microsoft Azure to Amazon Web Services (AWS).",
+          "Redesigned deployment workflows and optimized CI/CD pipelines for cross-cloud compatibility.",
+          "Improved scalability and reduced infrastructure costs through AWS-native services."
+        ]
+      },
+      {
+        "name": "PinPoint Application",
+        "description": [
+          "Developed and maintained enterprise modules using Angular, .NET Core, and Entity Framework Core.",
+          "Implemented Domain-Driven Design (DDD) principles for scalable and maintainable architecture.",
+          "Deployed applications on Microsoft Azure with automated build and release pipelines."
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Lead Engineer",
+    "company": "HCL Technologies",
+    "period": "Jan 2021 – March 2023",
+    "projects": [
+      {
+        "name": "Xerox Enterprise Platform",
+        "description": [
+          "Worked on internal automation tools and dashboards for Xerox clients.",
+          "Built Angular + ASP.NET Core components integrated with RESTful APIs.",
+          "Implemented CI/CD pipelines improving release efficiency by 35%."
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Software Developer",
+    "company": "National Informatics Centre (NIC)",
+    "period": "Oct 2019 – Dec 2020",
+    "projects": [
+      {
+        "name": "Pension & Certificate Management Systems",
+        "description": [
+          "Developed government applications for pension and certificate workflows.",
+          "Created secure, accessible, and responsive UIs using HTML, CSS, and JavaScript.",
+          "Collaborated with backend teams on .NET and SQL Server to implement business logic."
+        ]
+      }
+    ]
+  } 
+]
