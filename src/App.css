@@ -1,0 +1,163 @@
+/* === GLOBAL RESET === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === GLOBAL SECTION SPACING === */
+section {
+  scroll-margin-top: 60px;
+}
+
+/* === GENERAL ELEMENTS === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* === TEXT STYLES === */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+.text-accent {
+  color: #ffd166;
+}
+.highlight {
+  color: #00f5d4;
+}
+.text-gradient {
+  background: linear-gradient(90deg, #1abc9c, #16a085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #00b894, #00cec9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* === PAGE & NOTES SECTIONS === */
+.home,
+.notes {
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(360deg, #5236ab 0%, #e41937 100%);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* === GRADIENT SECTIONS === */
+.section-gradient-blue {
+  background: linear-gradient(135deg, #1a2980, #26d0ce);
+  color: #fff;
+}
+.section-gradient-purple {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+}
+.section-gradient-green {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: #fff;
+}
+.section-gradient-orange {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+}
+
+/* === CAPACITOR SECTION === */
+.capacitor-section {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: #fff;
+}
+
+/* === CARDS === */
+.card,
+.glass-card {
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.card:hover,
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* === NATIVE INTEGRATION CARDS === */
+.home .card.bg-primary {
+  background: linear-gradient(360deg, #5236ab 0%, #e41937 100%);
+  color: #fff;
+}
+.home .card.bg-primary i {
+  color: rgba(255, 255, 255, 0.95);
+}
+.home .card.bg-warning {
+  background: linear-gradient(360deg, #ffaf00 0%, #ff9100 100%);
+  color: #1f1f1f;
+}
+.home .card.bg-warning i {
+  color: rgba(3, 185, 246, 0.95);
+}
+.home .card.bg-primary:hover,
+.home .card.bg-warning:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 36px rgba(88, 150, 176, 0.18);
+}
+
+/* === BUTTONS === */
+.btn-gradient {
+  background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+  color: #fff !important;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+.btn-gradient-lg {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  color: #222;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 40px;
+}
+
+/* === ANIMATIONS (AOS) === */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
