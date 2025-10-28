@@ -51,11 +51,11 @@ const App: React.FC = () => {
         transition: "background 0.8s ease",
       }}
     >
-{/* 📦 APK Download Button */}
   <div
     className="position-fixed top-0 end-0 p-3"
     style={{ zIndex: 9999, display: "flex", gap: "0.5rem" }}
   >
+    
     {/* 🎨 Theme Switcher */}
     <button
       onClick={toggleTheme}
@@ -70,29 +70,7 @@ const App: React.FC = () => {
     >
       🎨 Switch Theme
     </button>
- 
   </div>
-
-      {/* 📦 APK Download Button */}
-      {!isApp && (
-        <div className="position-absolute top-0 end-0 p-3">
-          <a
-            href="https://github.com/jebindhanush/my-pwa-app/releases/download/test/app-debug.apk"
-            onClick={handleDownloadClick}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn fw-semibold shadow-sm"
-            style={{
-              background: gradients[theme],
-              color: "#fff",
-              border: "none",
-              borderRadius: "20px",
-            }}
-          >
-            📱 Download APK
-          </a>
-        </div>
-      )}
 
       {/* 🌟 Hero / Intro Section */}
       <section
@@ -181,49 +159,103 @@ const App: React.FC = () => {
       </section>
 
       {/* 🧑‍💻 Experience Section */}
-      <section id="experience" className="section-gradient-cyan text-light" data-aos="fade-up">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold text-glow">Professional Experience</h2>
-          <p className="opacity-75">
-            A snapshot of my journey building enterprise applications, leading
-            migrations, and delivering scalable software solutions.
-          </p>
+{/* 🧑‍💻 Experience Section */}
+<section
+  id="experience"
+  className="text-light"
+  data-aos="fade-up"
+  style={{
+    background:
+      theme === "blue-cyan"
+        ? "linear-gradient(180deg, #02141d 0%, #0e1a24 100%)"
+        : "linear-gradient(180deg, #1b0021 0%, #0c0012 100%)",
+    transition: "background 0.8s ease",
+    padding: "80px 0",
+  }}
+>
+  <div className="text-center mb-5">
+    <h2
+      className="fw-bold text-glow"
+      style={{
+        background: gradients[theme],
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        textShadow:
+          theme === "blue-cyan"
+            ? "0 0 15px rgba(0,255,157,0.4)"
+            : "0 0 15px rgba(155,0,255,0.4)",
+        transition: "all 0.5s ease",
+      }}
+    >
+      Professional Experience
+    </h2>
+    <p className="opacity-75">
+      A snapshot of my journey building enterprise applications, leading
+      migrations, and delivering scalable software solutions.
+    </p>
+  </div>
+
+  <div className="container">
+    {experienceData.map(({ role, company, period, projects }, i) => (
+      <div
+        key={i}
+        className="mb-3 glass-card shadow-sm p-3 rounded-4"
+        style={{
+          cursor: "pointer",
+          background:
+            theme === "blue-cyan"
+              ? "rgba(0, 255, 157, 0.05)"
+              : "rgba(155, 0, 255, 0.05)",
+          border: `1px solid ${
+            theme === "blue-cyan" ? "rgba(0, 255, 157, 0.3)" : "rgba(155, 0, 255, 0.3)"
+          }`,
+          transition: "all 0.4s ease",
+        }}
+        onClick={(e) => e.currentTarget.classList.toggle("expanded")}
+      >
+        <div className="d-flex justify-content-between align-items-center">
+          <div>
+            <h5
+              className="fw-bold mb-0"
+              style={{
+                color: theme === "blue-cyan" ? "#00ff9d" : "#b000ff",
+              }}
+            >
+              {role}
+            </h5>
+            <small className="opacity-75">{company}</small>
+          </div>
+          <span
+            className="small fw-semibold"
+            style={{
+              color: theme === "blue-cyan" ? "#00c2ff" : "#dba6ff",
+            }}
+          >
+            {period}
+          </span>
         </div>
 
-        <div className="container">
-          {experienceData.map(({ role, company, period, projects }, i) => (
-            <div
-              key={i}
-              className="mb-3 glass-card shadow-sm p-3 rounded-4"
-              style={{ cursor: "pointer" }}
-              onClick={(e) => e.currentTarget.classList.toggle("expanded")}
-            >
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <h5 className="fw-bold text-accent mb-0">{role}</h5>
-                  <small className="opacity-75">{company}</small>
-                </div>
-                <span className="text-accent small fw-semibold">{period}</span>
-              </div>
-
-              <div className="experience-details mt-3">
-                {projects.map((proj, j) => (
-                  <div key={j} className="mb-3">
-                    <h6 className="fw-semibold text-light mb-1">
-                      📁 {proj.name}
-                    </h6>
-                    <ul className="list-unstyled small mb-0 opacity-85">
-                      {proj.description.map((d, k) => (
-                        <li key={k}>• {d}</li>
-                      ))}
-                    </ul>
-                  </div>
+        <div className="experience-details mt-3">
+          {projects.map((proj, j) => (
+            <div key={j} className="mb-3">
+              <h6
+                className="fw-semibold mb-1"
+                style={{ color: theme === "blue-cyan" ? "#a8e6ff" : "#dba6ff" }}
+              >
+                📁 {proj.name}
+              </h6>
+              <ul className="list-unstyled small mb-0 opacity-85">
+                {proj.description.map((d, k) => (
+                  <li key={k}>• {d}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* 💼 Skills Section */}
       <section id="skills" className="section-gradient-blue text-light" data-aos="fade-up">
