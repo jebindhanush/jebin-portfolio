@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import skillsData from "./data/skills.json";
 import experienceData from "./data/experience.json";
+import myInfo from "./data/myInfo.json";
+
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"blue-cyan" | "green-purple">(
@@ -82,7 +84,7 @@ const App: React.FC = () => {
   className="display-4 fw-bold mb-3 gradient-text"
   key={theme} // 👈 forces React to re-render text properly on theme change
 >
-  👋 Hi, I’m <span className="fw-bold">Jebin&nbsp;T</span>
+  👋 Hi, I’m <span className="fw-bold">{myInfo.name}</span>
 </h1>
 
           <h3
@@ -96,22 +98,20 @@ const App: React.FC = () => {
                   : "0 0 10px rgba(155,0,255,0.4)",
             }}
           >
-            💻 Full Stack Developer | Cloud Enthusiast | Tech Explorer
+            💻 {myInfo.title}
           </h3>
 
           <p
             className="lead mb-4 opacity-75"
             style={{ maxWidth: "600px", lineHeight: "1.7" }}
           >
-            I craft{" "}
+            {myInfo.about.part1}{" "}
             <span className="text-accent fw-semibold">
-              scalable web & mobile solutions
+              {myInfo.about.part2}
             </span>{" "}
-            using <strong>ASP.NET</strong>, <strong>Angular</strong>,{" "}
-            <strong>React</strong>, and{" "}
-            <strong>Cloud Platforms (Azure / AWS)</strong>. Passionate about{" "}
-            <span className="highlight">modern UI, performance</span>, and
-            delivering meaningful digital experiences.
+            {myInfo.about.part3}
+            <span className="highlight">{myInfo.about.part4}</span>
+            {myInfo.about.part5}.
           </p>
 
           <div data-aos="zoom-in" data-aos-delay="300">
@@ -308,7 +308,7 @@ const App: React.FC = () => {
 
       {/* ⚫ Footer */}
       <footer className="text-center text-white py-3 bg-dark">
-        © {new Date().getFullYear()} Jebin Dhanush — Portfolio | Built with React + PWA
+        © {new Date().getFullYear()} Jebin T — Portfolio | Built with React + PWA
       </footer>
     </div>
   );

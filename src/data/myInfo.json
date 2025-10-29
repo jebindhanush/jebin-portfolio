@@ -1,0 +1,35 @@
+{
+    "name": "Jebin T",
+    "title": "Full Stack Developer | Cloud Enthusiast | Tech Explorer",
+    "about": {
+        "part1": "I craft ",
+        "part2": "scalable web & mobile solutions ",
+        "part3": "using ASP.NET, Angular, React, and Cloud Platforms (Azure / AWS). Passionate about ",
+        "part4": "modern UI, performance, ",
+        "part5": "and delivering meaningful digital experiences "
+    },
+    "email": "jebindhanush24@gmail.com",
+    "phone": "+91 8015662902",
+    "location": "Bangalore, India",
+    "socials": {
+        "linkedin": "https://www.linkedin.com/in/jebin-t-9752ab184/",
+        "github": "https://github.com/jebindhanush"
+    },
+    "education": [
+        {
+            "degree": "Bachelor of Technology in Computer Science",
+            "institution": "Rohini College of Engineering & Technologies",
+            "year": "2014 - 2018"
+        },
+        {
+            "degree": "Higher Secondary Education",
+            "institution": "Govt Higher Secondary School, Kottaram",
+            "year": "2012 - 2014"
+        },
+        {
+            "degree": "Secondary Education",
+            "institution": "Govt Higher Secondary School, Kottaram",
+            "year": "2011 - 2012"
+        }
+    ]
+}
