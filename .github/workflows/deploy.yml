@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+       # ✅ Auto bump version (patch level)
+      - name: Bump version
+        run: npm version patch --no-git-tag-version
+
       - name: Build the app
         run: npm run build
 

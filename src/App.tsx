@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import skillsData from "./data/skills.json";
 import experienceData from "./data/experience.json";
 import myInfo from "./data/myInfo.json";
-
+import packageJson from "../package.json"; // 👈 import version
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"blue-cyan" | "green-purple">(
@@ -29,6 +29,8 @@ const App: React.FC = () => {
     "blue-cyan": "linear-gradient(90deg, #00ff9d, #00c2ff)",
     "green-purple": "linear-gradient(90deg, #7fff00, #b000ff)",
   };
+
+  const appVersion = packageJson.version; // e.g., "1.0.0"
 
   return (
     <div
@@ -506,9 +508,9 @@ const App: React.FC = () => {
       
 
       {/* ⚫ Footer */}
-      <footer className="text-center text-white py-3 bg-dark">
-        © {new Date().getFullYear()} Jebin T — Portfolio | Built with React + PWA
-      </footer>
+     <footer className="text-center text-white py-3 bg-dark">
+  © {new Date().getFullYear()} Jebin T — Portfolio v{appVersion} | Built with React + PWA
+</footer>
     </div>
   );
 };
