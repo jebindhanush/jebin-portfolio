@@ -15,9 +15,9 @@
 🌐 **View Now:**
 👉 [https://jebindhanush.github.io/jebin-portfolio/](https://jebindhanush.github.io/jebin-portfolio/)
 
-My personal **Progressive Web App (PWA) Portfolio**, built with **React + TypeScript + Vite**, styled using **Bootstrap**, and enhanced with **glassmorphism** and **glitter gradient effects**.
+A stunning **Progressive Web App (PWA)** portfolio built with **React + TypeScript + Vite**, styled using **Bootstrap**, and enhanced with **glassmorphism**, **glitter gradients**, and **smooth animations**.
 
-This portfolio showcases my **skills, education, and professional experience**, all wrapped in a **fast, offline-ready, and installable** web app.
+This portfolio highlights my **skills, education, and professional experience** — all within a **fast, installable, and offline-ready** web app.
 
 ---
 
@@ -36,7 +36,7 @@ This portfolio showcases my **skills, education, and professional experience**, 
 ## 🏗️ **Project Setup**
 
 ```bash
-# 1️⃣ Clone this repository
+# 1️⃣ Clone the repository
 git clone https://github.com/jebindhanush/jebin-portfolio.git
 cd jebin-portfolio
 
@@ -54,19 +54,19 @@ npm run build
 
 ## ⚙️ **PWA Features**
 
-✅ Offline caching via Service Worker
-✅ Add to Home Screen (A2HS) support
-✅ Auto-version tracking using `version.json`
-✅ Installable across Android, iOS & Desktop
-✅ Fast, responsive, and SEO-friendly
+✅ Offline support with Service Worker
+✅ Add to Home Screen (A2HS) enabled
+✅ Auto version tracking using `version.json`
+✅ Cross-platform installable (Android, iOS, Desktop)
+✅ Optimized for performance, accessibility & SEO
 
 ---
 
 ## 🚀 **Deployment (GitHub Actions + Pages)**
 
-This portfolio deploys **automatically** to **GitHub Pages** whenever changes are pushed to the `main` branch.
+This app is **automatically deployed** to GitHub Pages when changes are pushed to the `main` branch.
 
-**Workflow Overview:**
+**GitHub Actions Workflow:**
 
 ```yaml
 - name: Deploy Vite React App to gh-pages
@@ -104,13 +104,13 @@ This portfolio deploys **automatically** to **GitHub Pages** whenever changes ar
 
 ## ✨ **Highlights**
 
-* 🎨 Dynamic Theme Switching
+* 🎨 Dynamic Theme Switcher
 * 💎 Glassy + Glitter Gradient UI
 * 💼 Milky “Professional Experience” Section
-* 🎓 Interactive Education Section with CTAs
+* 🎓 Interactive Education Cards with CTAs
 * 🚀 Animated Skills Grid with Glitter Effect
-* 🌈 Fully Responsive and Mobile-Optimized
-* 🔄 Auto Deployed via GitHub Actions
+* 🌈 Fully Responsive & Mobile-Optimized
+* 🔄 Continuous Deployment via GitHub Actions
 
 ---
 
@@ -121,11 +121,13 @@ Full Stack Developer | Cloud Enthusiast | Tech Explorer
 
 🌐 **Portfolio:** [https://jebindhanush.github.io/jebin-portfolio/](https://jebindhanush.github.io/jebin-portfolio/)
 💼 **GitHub:** [https://github.com/jebindhanush](https://github.com/jebindhanush)
-✉️ *(Optional: Add your email or LinkedIn link here)*
+📧 **Email:**
+
+* ✉️ [jebin.t97@gmail.com](mailto:jebin.t97@gmail.com)
+* ✉️ [jebindhanush24@gmail.com](mailto:jebindhanush24@gmail.com)
 
 ---
 
 ## 🪪 **License**
 
 This project is open source and available under the [MIT License](LICENSE).
- 
