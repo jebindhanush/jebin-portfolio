@@ -1,0 +1,22 @@
+.section-gradient-cyan {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  padding: 80px 0;
+}
+
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.glass-card.expanded .experience-details {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.card ul li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}

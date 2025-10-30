@@ -1,0 +1,14 @@
+.section-gradient-blue {
+  background: linear-gradient(135deg, #0a1930, #09203f);
+  color: #fff;
+  padding: 80px 0;
+}
+
+.education-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.education-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 255, 180, 0.3);
+}

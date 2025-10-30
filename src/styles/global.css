@@ -1,0 +1,56 @@
+/* === GLOBAL RESET === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === GLOBAL SECTION SPACING === */
+section {
+  scroll-margin-top: 60px;
+}
+
+/* === GENERAL ELEMENTS === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* === TEXT UTILITIES === */
+.text-glow {
+  text-shadow: 0 0 12px rgba(0, 255, 200, 0.5);
+}
+.text-accent {
+  color: #00ff9d !important;
+}
+.highlight {
+  color: #00ffb0;
+  font-weight: 600;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #00ff9d, #00c2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* === GLASSMORPHIC CARD BASE === */
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.2);
+}
