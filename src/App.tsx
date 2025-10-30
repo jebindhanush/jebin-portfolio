@@ -17,9 +17,10 @@ const App: React.FC = () => {
 
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+ useEffect(() => {
+  localStorage.setItem("theme", theme);
+  AOS.refresh(); // 👈 re-calculate animations on theme change
+}, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "blue-cyan" ? "green-purple" : "blue-cyan"));
