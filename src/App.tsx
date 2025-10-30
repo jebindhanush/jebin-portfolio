@@ -508,9 +508,92 @@ const App: React.FC = () => {
       
 
       {/* ⚫ Footer */}
-     <footer className="text-center text-white py-3 bg-dark">
-  © {new Date().getFullYear()} Jebin T — Portfolio v{appVersion} | Built with React + PWA
+   {/* ⚫ Footer */}
+<footer
+  className="text-center text-white py-4"
+  style={{
+    background:
+      theme === "blue-cyan"
+        ? "linear-gradient(90deg, #00141d, #00334d)"
+        : "linear-gradient(90deg, #1a0020, #3b0055)",
+    transition: "background 0.8s ease",
+  }}
+>
+  <div className="container">
+    {/* 🌐 Social Links */}
+    <div className="d-flex justify-content-center mb-3 gap-4">
+      <a
+        href="https://www.linkedin.com/in/jebin-t-9752ab184/" // 🔗 your LinkedIn
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: theme === "blue-cyan" ? "#00c2ff" : "#b000ff",
+          fontSize: "1.5rem",
+          transition: "all 0.3s ease",
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.color =
+            theme === "blue-cyan" ? "#00ff9d" : "#ff66ff")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.color =
+            theme === "blue-cyan" ? "#00c2ff" : "#b000ff")
+        }
+      >
+        <i className="bi bi-linkedin"></i>
+      </a>
+
+      {/* <a
+        href="https://github.com/jebindhanush" // 🔗 your GitHub
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: theme === "blue-cyan" ? "#00c2ff" : "#b000ff",
+          fontSize: "1.5rem",
+          transition: "all 0.3s ease",
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.color =
+            theme === "blue-cyan" ? "#00ff9d" : "#ff66ff")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.color =
+            theme === "blue-cyan" ? "#00c2ff" : "#b000ff")
+        }
+      >
+        <i className="bi bi-github"></i>
+      </a> */}
+
+      <a
+        href="https://jebindhanush.github.io/jebin-portfolio/" // 🔗 Portfolio URL
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: theme === "blue-cyan" ? "#00c2ff" : "#b000ff",
+          fontSize: "1.5rem",
+          transition: "all 0.3s ease",
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.color =
+            theme === "blue-cyan" ? "#00ff9d" : "#ff66ff")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.color =
+            theme === "blue-cyan" ? "#00c2ff" : "#b000ff")
+        }
+      >
+        <i className="bi bi-globe2"></i>
+      </a>
+    </div>
+
+    {/* 🧾 Footer Text */}
+    <p className="small mb-0">
+      © {new Date().getFullYear()} Jebin T — Portfolio v{appVersion} | Built
+      with React + PWA
+    </p>
+  </div>
 </footer>
+
     </div>
   );
 };
