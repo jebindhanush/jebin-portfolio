@@ -37,7 +37,8 @@
     "skills": [
       { "name": "RDLC Reports", "level": 85 },
       { "name": ".NET Reports", "level": 80 },
-      { "name": "AmCharts / HighCharts", "level": 75 }
+      { "name": "AmCharts / HighCharts", "level": 75 },
+      { "name": "Power BI", "level": 65 }
     ]
   },
   {
@@ -56,7 +57,14 @@
       { "name": "GitHub Copilot", "level": 85 },
       { "name": "VS Code / Visual Studio", "level": 90 },
       { "name": "CI/CD Pipelines", "level": 80 },
-      { "name": "Docker Basics", "level": 70 }
+      { "name": "Docker", "level": 60 }
+    ]
+  },
+    {
+    "title": "🤖 AI",
+    "skills": [
+      { "name": "Github CoPilot", "level": 70 },
+      { "name": "Private GPT", "level": 70 } 
     ]
   }
 ]

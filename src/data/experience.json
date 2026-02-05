@@ -7,17 +7,50 @@
       {
         "name": "StoneEagle Migration",
         "description": [
-          "Led the migration of StoneEagle platform from Microsoft Azure to Amazon Web Services (AWS).",
+          "Led the migration of the StoneEagle platform from Microsoft Azure to Amazon Web Services (AWS).",
           "Redesigned deployment workflows and optimized CI/CD pipelines for cross-cloud compatibility.",
-          "Improved scalability and reduced infrastructure costs through AWS-native services."
+          "Improved scalability and reduced infrastructure costs using AWS-native services."
+        ],
+        "roles_and_responsibilities": [
+          "Architected cloud migration strategy and execution plan.",
+          "Worked with DevOps and infrastructure teams to modernize deployments.",
+          "Ensured application reliability, security, and performance post-migration.",
+          "Coordinated with stakeholders to minimize downtime during transition."
+        ],
+        "tech_used": [
+          "AWS",
+          "Azure",
+          "Docker",
+          "Kubernetes",
+          "CI/CD",
+          "Terraform",
+          "Git",
+          "Cloud Monitoring"
         ]
       },
       {
         "name": "PinPoint Application",
         "description": [
           "Developed and maintained enterprise modules using Angular, .NET Core, and Entity Framework Core.",
-          "Implemented Domain-Driven Design (DDD) principles for scalable and maintainable architecture.",
-          "Deployed applications on Microsoft Azure with automated build and release pipelines."
+          "Implemented Domain-Driven Design (DDD) principles for scalable architecture.",
+          "Deployed applications on Microsoft Azure with automated pipelines."
+        ],
+        "roles_and_responsibilities": [
+          "Designed and implemented microservices-based modules.",
+          "Built REST APIs using ASP.NET Core Web API.",
+          "Worked on database design using SQL Server and EF Core.",
+          "Implemented unit testing and code reviews.",
+          "Supported production deployments and issue resolution."
+        ],
+        "tech_used": [
+          "Angular",
+          "ASP.NET Core",
+          "Entity Framework Core",
+          "SQL Server",
+          "Azure DevOps",
+          "REST APIs",
+          "DDD",
+          "Git"
         ]
       }
     ]
@@ -30,9 +63,25 @@
       {
         "name": "Xerox Enterprise Platform",
         "description": [
-          "Worked on internal automation tools and dashboards for Xerox clients.",
-          "Built Angular + ASP.NET Core components integrated with RESTful APIs.",
-          "Implemented CI/CD pipelines improving release efficiency by 35%."
+          "Developed internal automation tools and dashboards for Xerox clients.",
+          "Built Angular and ASP.NET Core components integrated with RESTful APIs.",
+          "Improved release efficiency by 35% through optimized CI/CD pipelines."
+        ],
+        "roles_and_responsibilities": [
+          "Designed frontend modules using Angular.",
+          "Developed backend services using ASP.NET Core.",
+          "Integrated third-party APIs and internal services.",
+          "Automated build and deployment pipelines.",
+          "Performed testing and performance optimization."
+        ],
+        "tech_used": [
+          "Angular",
+          "ASP.NET Core Web API",
+          "SQL Server",
+          "Azure DevOps",
+          "CI/CD",
+          "REST APIs",
+          "Git"
         ]
       }
     ]
@@ -43,13 +92,33 @@
     "period": "Oct 2019 – Dec 2020",
     "projects": [
       {
-        "name": "Pension & Certificate Management Systems",
+        "name": "DOCUMENT CHAIN",
         "description": [
-          "Developed government applications for pension and certificate workflows.",
-          "Created secure, accessible, and responsive UIs using HTML, CSS, and JavaScript.",
-          "Collaborated with backend teams on .NET and SQL Server to implement business logic."
+          "Designed and developed a blockchain-based secure document management system for government certificates.",
+          "Implemented tamper-proof storage by integrating backend systems with blockchain technology.",
+          "Built responsive and user-friendly admin and user portals using Angular, HTML, CSS, and JavaScript.",
+          "Enabled QR-code-based certificate retrieval and secure document downloads.",
+          "Worked closely with backend teams using .NET Core and SQL Server to implement business logic and APIs."
+        ],
+        "roles_and_responsibilities": [
+          "Analyzed requirements and designed system workflows for certificate management.",
+          "Developed front-end modules for admin and user interfaces.",
+          "Integrated frontend with .NET Web APIs for secure data exchange.",
+          "Implemented QR code scanning and validation features.",
+          "Performed testing, debugging, and performance optimization.",
+          "Collaborated with cross-functional teams to ensure timely project delivery."
+        ],
+        "tech_used": [
+          "Angular",
+          "HTML, CSS, JavaScript",
+          "ASP.NET Core Web API",
+          "SQL Server",
+          "Blockchain",
+          "QR Code Integration",
+          "REST APIs",
+          "Agile/Scrum"
         ]
       }
     ]
-  } 
+  }
 ]

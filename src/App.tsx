@@ -246,63 +246,92 @@ const App: React.FC = () => {
 
   <div className="container">
     {experienceData.map(({ role, company, period, projects }, i) => (
-      <div
-        key={i}
-        className="mb-3 glass-card shadow-sm p-3 rounded-4"
+  <div
+    key={i}
+    className="mb-3 glass-card shadow-sm p-3 rounded-4"
+    style={{
+      cursor: "pointer",
+      background:
+        theme === "blue-cyan"
+          ? "rgba(0, 255, 157, 0.05)"
+          : "rgba(155, 0, 255, 0.05)",
+      border: `1px solid ${
+        theme === "blue-cyan"
+          ? "rgba(0, 255, 157, 0.3)"
+          : "rgba(155, 0, 255, 0.3)"
+      }`,
+      transition: "all 0.4s ease",
+    }}
+    onClick={(e) => e.currentTarget.classList.toggle("expanded")}
+  >
+    <div className="d-flex justify-content-between align-items-center">
+      <div>
+        <h5
+          className="fw-bold mb-0"
+          style={{
+            color: theme === "blue-cyan" ? "#00ff9d" : "#b000ff",
+          }}
+        >
+          {role}
+        </h5>
+        <small className="opacity-75">{company}</small>
+      </div>
+      <span
+        className="small fw-semibold"
         style={{
-          cursor: "pointer",
-          background:
-            theme === "blue-cyan"
-              ? "rgba(0, 255, 157, 0.05)"
-              : "rgba(155, 0, 255, 0.05)",
-          border: `1px solid ${
-            theme === "blue-cyan" ? "rgba(0, 255, 157, 0.3)" : "rgba(155, 0, 255, 0.3)"
-          }`,
-          transition: "all 0.4s ease",
+          color: theme === "blue-cyan" ? "#00c2ff" : "#dba6ff",
         }}
-        onClick={(e) => e.currentTarget.classList.toggle("expanded")}
       >
-        <div className="d-flex justify-content-between align-items-center">
-          <div>
-            <h5
-              className="fw-bold mb-0"
-              style={{
-                color: theme === "blue-cyan" ? "#00ff9d" : "#b000ff",
-              }}
-            >
-              {role}
-            </h5>
-            <small className="opacity-75">{company}</small>
-          </div>
-          <span
-            className="small fw-semibold"
+        {period}
+      </span>
+    </div>
+
+    <div className="experience-details mt-3">
+      {projects.map((proj, j) => (
+        <div key={j} className="mb-3">
+          <h6
+            className="fw-semibold mb-1"
             style={{
-              color: theme === "blue-cyan" ? "#00c2ff" : "#dba6ff",
+              color: theme === "blue-cyan" ? "#a8e6ff" : "#dba6ff",
             }}
           >
-            {period}
-          </span>
-        </div>
+            📁 {proj.name}
+          </h6>
 
-        <div className="experience-details mt-3">
-          {projects.map((proj, j) => (
-            <div key={j} className="mb-3">
-              <h6
-                className="fw-semibold mb-1"
-                style={{ color: theme === "blue-cyan" ? "#a8e6ff" : "#dba6ff" }}
-              >
-                📁 {proj.name}
-              </h6>
-              <ul className="list-unstyled small mb-0 opacity-85">
-                {proj.description.map((d, k) => (
-                  <li key={k}>• {d}</li>
+          {/* Description */}
+          <ul className="list-unstyled small mb-2 opacity-85">
+            {proj.description.map((d, k) => (
+              <li key={k}>• {d}</li>
+            ))}
+          </ul>
+
+          {/* Roles & Responsibilities */}
+          {proj.roles_and_responsibilities && (
+            <>
+              <div className="fw-semibold small mb-1">Roles & Responsibilities:</div>
+              <ul className="list-unstyled small mb-2 opacity-85">
+                {proj.roles_and_responsibilities.map((r, k) => (
+                  <li key={k}>• {r}</li>
                 ))}
               </ul>
-            </div>
-          ))}
+            </>
+          )}
+
+          {/* Tech Used */}
+          {proj.tech_used && (
+            <>
+              <div className="fw-semibold small mb-1">Tech Used:</div>
+              <div className="small opacity-85">
+                {proj.tech_used.join(" • ")}
+              </div>
+            </>
+          )}
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
+  </div>
+))}
+
   </div>
 </section>
 

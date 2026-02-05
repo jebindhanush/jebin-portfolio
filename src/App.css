@@ -194,7 +194,7 @@ img {
 }
 
 .glass-card.expanded .experience-details {
-  max-height: 300px;
+  max-height: none;
   opacity: 1;
   margin-top: 10px;
 }
